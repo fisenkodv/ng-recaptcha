@@ -1,6 +1,21 @@
-<form [formGroup]="signin">
-  <input type="email" placeholder="email" formControlName="email">
-  <input type="password" placeholder="password" formControlName="password">
-  <div recaptcha key="sitekey" formControlName="captcha"></div>
-  <input type="submit" [disabled]="signin.invalid" value="Submit">
-</form>
+<div class="container">
+  <div class="row">
+    <h1 class="col text-center mt-5">Angular reCaptcha directive example</h1>
+  </div>
+  <div class="row">
+    <form class="col" [formGroup]="signin">
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input id="email" class="form-control" type="email" placeholder="email" formControlName="email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" class="form-control" type="password" placeholder="password" formControlName="password">
+      </div>
+    </form>
+  </div>
+  <div class="row">
+    <div class="col" recaptcha key="sitekey" formControlName="captcha"></div>
+  </div>
+  <input type="submit" class="btn btn-primary my-2" [disabled]="signin.invalid" value="Submit">
+</div>
