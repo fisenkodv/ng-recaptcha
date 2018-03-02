@@ -7,7 +7,7 @@ app.use(cors());
 
 const secret = 'SECRET_KEY';
 
-app.get('/', (req, res) => res.send('Hello World!'));
+app.get('/', (req, res) => res.send('reCAPTCHA Development Server is listening you!'));
 
 app.get('/validate_captcha', (req, res) => {
 
@@ -27,4 +27,4 @@ app.get('/validate_captcha', (req, res) => {
 
 });
 
-app.listen(3000, () => console.log('app listening on port 3000!'))
+app.listen(3000, () => console.log('reCAPTCHA Development Server is listening on localhost:3000, open your browser on http://localhost:3000/'))
