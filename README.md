@@ -3,8 +3,8 @@
 ## How to use
 
 
-```
-<form  [formGroup]="signin">
+```html
+<form [formGroup]="signin">
   <input type="email" placeholder="email" formControlName="email">
   <input type="password" placeholder="password" formControlName="password">
   <div recaptcha key="sitekey" formControlName="captcha"></div>
@@ -12,7 +12,7 @@
 </form>
 ```
 for the `signin` form group
-```
+```typescript
 this.signin = new FormGroup({
   email: new FormControl(null, Validators.required),
   password: new FormControl(null, Validators.required),
